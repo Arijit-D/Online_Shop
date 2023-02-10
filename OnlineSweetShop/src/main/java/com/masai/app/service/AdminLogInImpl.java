@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import com.masai.app.dao.AdminDao;
 import com.masai.app.dao.CustomerDao;
 import com.masai.app.dao.ProductDao;
-
+import com.masai.app.exception.AdminException;
 import com.masai.app.model.Admin;
 import com.masai.app.model.Product;
 
@@ -101,7 +101,7 @@ public class AdminLogInImpl implements AdminLogIn {
 			
 		}
 		
-		return "log in first";
+		throw new AdminException("login first");
 		
 	}
 

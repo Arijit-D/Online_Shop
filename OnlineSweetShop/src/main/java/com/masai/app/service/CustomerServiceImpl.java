@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.masai.app.dao.CustomerDao;
+import com.masai.app.exception.CustomerException;
 import com.masai.app.model.Customer;
 import com.masai.app.model.Status;
 
@@ -39,7 +40,7 @@ public class CustomerServiceImpl implements CustomerService {
 			return "done";
 	   }
 	   else {
-		   return "not done";
+		   throw new  CustomerException("not done");
 	   }
 		
 	}
